@@ -1,7 +1,7 @@
 /*
  * Author: Landon Fuller <landonf@plausiblelabs.com>
  *
- * Copyright (c) 2013 Plausible Labs Cooperative, Inc.
+ * Copyright (c) 2013-2015 Plausible Labs Cooperative, Inc.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -26,13 +26,14 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifdef __OBJC__
-
 #import <Foundation/Foundation.h>
-#define XPFLog(fmt, ...) NSLog(@"[XcodePostFacto] %@", [NSString stringWithFormat: fmt, ##__VA_ARGS__])
-#else
 
-#import <stdio.h>
-#define XPFLog(fmt, ...) fprintf(stderr, "[XcodePostFacto] " fmt "\n", ##__VA_ARGS__)
+@interface NSObject (PLPatchMaster)
 
-#endif
++ (BOOL) pl_patchSelector: (SEL) selector withReplacementBlock: (id) replacementBlock;
++ (BOOL) pl_patchInstanceSelector: (SEL) selector withReplacementBlock: (id) replacementBlock;
+
++ (void) pl_patchFutureSelector: (SEL) selector withReplacementBlock: (id) replacementBlock;
++ (void) pl_patchFutureInstanceSelector: (SEL) selector withReplacementBlock: (id) replacementBlock;
+
+@end

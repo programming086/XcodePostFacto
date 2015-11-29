@@ -6,7 +6,7 @@ The name is, of course, a nod to the original [XPostFacto](https://en.wikipedia.
 
 ## Why
 
-It seems a bit gratitious to break compatibility with an OS release that was current less than 6 months ago, and while the the Yosemite upgrade is free, it has it's own inherent costs -- especially in terms of [privacy](https://fix-macosx.com/) and [quality](http://mjtsai.com/blog/2015/01/06/apples-software-quality-continued/) [issues](http://mjtsai.com/blog/2014/10/11/apples-software-quality-decline/).
+It seems a bit gratitious to break compatibility with an OS release that was current less than 6 months ago, and while the the Yosemite upgrade is free, it has its own inherent costs -- especially in terms of [privacy](https://fix-macosx.com/) and [quality](http://mjtsai.com/blog/2015/01/06/apples-software-quality-continued/) [issues](http://mjtsai.com/blog/2014/10/11/apples-software-quality-decline/).
 
 Plus, I don't like being told what to do :-)
 
@@ -14,7 +14,7 @@ Plus, I don't like being told what to do :-)
 
 After building the `xpf-bootstrap.framework`, Xcode can be launched from the command-line:
 
-    env DYLD_INSERT_LIBRARIES=$ABSOLUTE_PATH_TO_FRAMEWORK/xpf-bootstrap.framework/xpf-bootstrap /Applications/Xcode-beta.app/Contents/MacOS/Xcode
+    env DYLD_INSERT_LIBRARIES=$ABSOLUTE_PATH_TO_FRAMEWORK/xpf-bootstrap.framework/xpf-bootstrap /Applications/Xcode.app/Contents/MacOS/Xcode
 
 Contribution of a wrapping launch application would be most appreciated, especially one that supports drag-and-drop of the Xcode binary to create a new launcher :-)
 
